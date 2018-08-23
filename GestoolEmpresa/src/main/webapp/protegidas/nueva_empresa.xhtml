@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2" style="margin: 0 auto">
+                <p:outputLabel for="txtEmpresa" value="Nombre"></p:outputLabel>
+                <p:inputText id="txtEmpresa" required="true" value="#{empresasController.empresa.nombre}"></p:inputText>
+                <p:outputLabel for="txtCodigo" value="Codigo"></p:outputLabel>
+                <p:inputText id="txtCodigo"  required="true" value="#{empresasController.empresa.codigo}"></p:inputText>
+                <p:outputLabel for="txtNIF" value="NIF"></p:outputLabel>
+                <p:inputText id="txtNIF" required="true" value="#{empresasController.empresa.nif}"></p:inputText>
+                <p:outputLabel for="txtWeb" value="Página web"></p:outputLabel>
+                <p:inputText id="txtWeb" required="true" value="#{empresasController.empresa.pagina_web}"></p:inputText>
+                <p:outputLabel for="txtUuid" value="Uuid"></p:outputLabel>
+                <p:inputText id="txtUuid" required="true" value="#{empresasController.empresa.uuid}"></p:inputText>
+            </h:panelGrid>
+            <h:panelGrid columns="1" style="margin: 0 auto">
+                <p:commandButton value="Añadir" actionListener="#{empresasController.nuevaEmpresa()}"></p:commandButton>
+            </h:panelGrid>
+
+        </h:form>
+    </h:body>
+   
+</html>
