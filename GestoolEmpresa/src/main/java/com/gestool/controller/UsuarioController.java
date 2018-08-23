@@ -12,13 +12,14 @@ import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named("usuarioController")
-@ViewScoped
+@RequestScoped
 public class UsuarioController implements Serializable{
     
     @EJB

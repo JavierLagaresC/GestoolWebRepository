@@ -4,13 +4,14 @@ import com.gestool.models.Usuario;
 import java.io.IOException;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
 @Named("plantillaController")
-@ViewScoped
+@RequestScoped
 public class PlantillaController implements Serializable{
     
     public void checkLogin(){

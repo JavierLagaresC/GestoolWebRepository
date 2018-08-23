@@ -7,6 +7,7 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.RequestScoped;
 import javax.inject.Named;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
@@ -14,7 +15,7 @@ import javax.inject.Inject;
 
 
 @Named("empresasController")
-@ViewScoped
+@RequestScoped
 public class EmpresasController implements Serializable{
     
     @EJB
