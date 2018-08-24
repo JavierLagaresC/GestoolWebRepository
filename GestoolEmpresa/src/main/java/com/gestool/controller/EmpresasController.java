@@ -6,16 +6,21 @@ import java.io.Serializable;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Any;
+import javax.enterprise.inject.Default;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.inject.Named;
 import javax.faces.context.FacesContext;
+import javax.faces.flow.FlowScoped;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 
-
-@Named("empresasController")
-@RequestScoped
+@Named
+@ViewScoped
 public class EmpresasController implements Serializable{
     
     @EJB

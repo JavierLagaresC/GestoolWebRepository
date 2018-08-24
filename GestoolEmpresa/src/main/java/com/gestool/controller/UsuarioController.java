@@ -11,15 +11,20 @@ import com.gestool.models.Usuario;
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Any;
+import javax.enterprise.inject.Default;
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
+import javax.faces.flow.FlowScoped;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@Named("usuarioController")
-@RequestScoped
+@Named
+@ViewScoped
 public class UsuarioController implements Serializable{
     
     @EJB
