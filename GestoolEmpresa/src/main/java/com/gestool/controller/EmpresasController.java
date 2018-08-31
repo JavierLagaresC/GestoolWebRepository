@@ -12,13 +12,13 @@ import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 
-@Named
+@Named("empresasController")
 @ViewScoped
 public class EmpresasController implements Serializable{
     
     @EJB
     private EmpresasFacadeLocal empresaEJB;   
-    @Inject
+    
     private Empresas empresa;
  
     private List<Empresas> listaEmpresas;

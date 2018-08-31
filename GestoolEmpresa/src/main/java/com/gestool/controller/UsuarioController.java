@@ -17,21 +17,21 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@Named
+@Named("usuarioController")
 @ViewScoped
 public class UsuarioController implements Serializable{
     
     @EJB
     private UsuarioFacadeLocal usuarioEJB;
     //private List<Usuario> listaUsuarios;
-    @Inject
+    
     private Usuario usuario;
 
     private Roles rol;
 
     @PostConstruct
     public void Init(){
-        //usuario = new Usuario();
+        usuario = new Usuario();
         //listaUsuarios = usuarioEJB.findAll();
     }
 

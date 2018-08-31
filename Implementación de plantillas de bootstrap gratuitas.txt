@@ -1,0 +1,17 @@
+El vídeo está en francés pero se entiende bien la implementación:
+
+https://www.youtube.com/watch?v=lGHwipNvuno
+
+Se puede trabajar con plantillas de administración de bootstrap, totalmente responsivas para distintos dispositivos
+y tamaños de pantalla, en el video las implementa por vista principal y la divide en fragmentos, haciendo así uso
+de fragments y componentes. Pero si resulta más sencillo se pueden incluir todos los .html que se consideren necesarios.
+Creo que es bastante potente y sencillo, además de tener un catalogo decente con plantillas de licencia MIT(gratuitas y 
+para el uso que se quiera, incluso venderse, pero siempre dejando los créditos del autor como derechos de copyright)
+
+Adjunto una web que tiene algunas plantillas gratuitas de bootstrap:
+
+https://athemes.com/collections/free-bootstrap-admin-templates/
+
+Y aquí una plantilla en concreto que me ha llamado la atención:
+
+https://www.bootstrapdash.com/product/star-admin-free/

@@ -7,7 +7,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
-@Named
+@Named("plantillaController")
 @ViewScoped
 public class PlantillaController implements Serializable{
     
