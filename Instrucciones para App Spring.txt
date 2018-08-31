@@ -1,0 +1,37 @@
+Para ejecutar el proyecto en spring -> click derecho sobre el proyecto - > run as- > Spring boot app
+
+La url donde se está ejecutando es 8080 pero puedes cambiarle el puerto en el archivo application.properties escribiendo
+en una linea : server.port= tupuerto
+En ese mismo archivo encontraremos la conexión con la base de datos jdb/mysql
+
+Las clases java se dividen en 6 paquetes:
+Ubicación--- src/main/java
+Modelo: se declaran las clases modelos o pojos de la app
+Repository(interfaz): se implementa el crud repository
+services: se hace un autocableado mediante la etiqueta @Autowired al repository y se declaran los metodos crud
+	  traidos del repository
+Controller: Aquí escribiremos los metododos con las rutas de nuestra web y donde le pasaremos a los metodos del service
+	    los datos de la clase modelo. Aquí debemos implementar también el @Autowired llamando a los servicios 
+	    que necesitemos
+Formbean: Este es opcional, en mi caso lo he usado para declarar un método especial para el login del formulario y no
+	  tener el código tan enrevesado
+Y por último tenemos el paquete que contiene la clase pricipal que ejecuta la app, aquí se definen algunos bean extras que la inyección
+no fuera capaz de traerlos. ***MUY IMPORTANTE QUE ESTÉ PAQUETE ESTE POR ENCIMA EN LA ESTRUCTURA DE TODOS LOS DEMÁS,
+				SI NO LA APLICACIÓN NO ARRANCARÁ***
+
+
+Las plantillas podemos encontrarlas en la ruta: src/main/resources
+
+Aquí encontraremos 3 cosas:
+Static: aquí meteremos el css, imagenes, y scripts
+Templates: aquí todas las plantilas html o fragmentos de las mismas
+Y el application.properties ya comentado anteriormente
+
+
+Por último debajo de toda la estructura tenemos un archivo pom.xml donde podemos añadir nuevas librerias.
+Con esto tenemos un MVC puro muy sencillo e intuitivo en cuanto se le pilla el truco
+
+EN LA APLICACIÓN PARA LA PRUEBA HE AÑADIDO EN HEIDI SQL DOS USUARIOS UNO admin-admin(con valor 1 en super_user)
+y el otro usuario-usuario(con valor 0 en super_user) a cada uno se le mostrarán distintas vistas si se le asocia 
+este valor en 1 o 0
+
